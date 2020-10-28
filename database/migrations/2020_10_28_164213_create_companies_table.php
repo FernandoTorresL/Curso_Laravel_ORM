@@ -11,12 +11,14 @@ class CreateCompaniesTable extends Migration
      *
      * @return void
      */
+
+    public $timestamps = false;
+
     public function up()
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->increments('company_id');
             $table->string('name', 20)->nullable();
-            $table->timestamps();
         });
     }
 

@@ -11,12 +11,13 @@ class CreateUsersTable extends Migration
      *
      * @return void
      */
+    public $timestamps = false;
+
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('user_id');
             $table->string('name', 20)->nullable();
-            $table->timestamps();
         });
     }
 
